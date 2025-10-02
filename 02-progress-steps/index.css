@@ -1,0 +1,77 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+:root {
+  --primary-color: #3498db;
+
+  --grey-color: #e0e0e0;
+  --body-color: #f6f7fb;
+}
+
+.container {
+  font-size: 1.5rem;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  /* margin: 200px; */
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.action {
+  width: 40rem;
+  display: flex;
+  justify-content: center;
+  color: var(--grey-color);
+}
+.btn {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border-color: var(--grey-color);
+}
+.circle {
+  border: 0.3rem solid var(--primary-color);
+  border-radius: 50%;
+  padding: 0.4rem 0.8rem;
+  width: 1rem;
+  position: relative;
+  z-index: 1;
+  color: var(--grey-color);
+}
+
+.step:last-child {
+  flex: 0;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  height: 3px;
+  width: calc(100% - 3.2rem);
+  background: var(--grey-color);
+  position: absolute;
+  top: 50%;
+  left: 3.2rem;
+  transform: translateY(-50%);
+  /* transform: translateX(50%); */
+  /* z-index: 0; */
+}
